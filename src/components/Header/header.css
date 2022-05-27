@@ -1,0 +1,34 @@
+/* @import url('http://fonts.cdnfonts.com/css/harabara'); */
+
+.header {
+    padding-top: 7rem;
+}
+
+.header-text h1 {
+    font-size: 4rem;
+    font-family: 'Harabara', sans-serif;
+                                                
+}
+
+.header-text p {
+    font-size: 1rem;                            
+}
+
+.header-image {
+    text-align: center;
+}
+
+.header-image img {
+    width: 60%;
+}
+
+@media screen and (max-width: 640px) {
+    .header {
+        padding-top: 3rem;
+        text-align: center;
+    }
+
+    .header-text h1 {
+        font-size: 3.4rem;      
+    }
+}

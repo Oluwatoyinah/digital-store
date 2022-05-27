@@ -1,0 +1,23 @@
+.footer {
+    background-color: #00000a;
+    color: white;
+}
+
+.footer h2 {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    font-family: 'Harabara', sans-serif;
+}
+
+.quick-links ul {
+    padding: 0;
+}
+
+.quick-links li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer p {
+    font-size: 1rem;
+}

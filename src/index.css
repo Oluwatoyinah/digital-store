@@ -1,13 +1,47 @@
-body {
+@import url('http://fonts.cdnfonts.com/css/harabara');
+@import url('http://fonts.cdnfonts.com/css/proxima-nova-lt-2');
+@import url('http://fonts.cdnfonts.com/css/helvetica-neue-9');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  color: black;
+  font-family: 'Proxima Nova Lt', sans-serif;
+}
+
+
+h2, h4,h6 {
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 0;
+  padding: 0;
+}
+
+.btn-red {
+  padding: 10px 25px;
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  border: 1px solid red;
+  transition: 0.5s ease-in;
+  font-size: 13px;
+}
+
+.btn-red:hover {
+  padding: 10px 25px;
+  color: red;
+  background-color: white;
+  text-decoration: none;
+  border: 1px solid red;
 }
