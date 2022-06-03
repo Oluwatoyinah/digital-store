@@ -22,7 +22,7 @@ const Footer = () => {
                 <div className="col-md-5 col-lg-3">
                     <div>
                         <h5>Contact Us</h5>
-                        <p className="mb-0">hello@toyinstore.com</p>
+                        <p className="mb-0">info@toyinstore.com</p>
                         <p>+1 285 3482 42</p>
                     </div>
 

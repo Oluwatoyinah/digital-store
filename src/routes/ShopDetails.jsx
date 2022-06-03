@@ -1,5 +1,5 @@
 import React from 'react';
-// import Product from "../components/Products/Product";
+import Product from "../components/Products/Product";
 
 const ShopDetails = (props) => {
   return (
@@ -7,7 +7,8 @@ const ShopDetails = (props) => {
         <div className="container">
             <div className="row">
                 <div className="col-md-7">
-                    <img src={props.imgurl} alt="" />
+                    flsfkjs
+                    <img src={props.imgUrl} alt="" />
                 </div>
 
                 <div className="col-md-5">
