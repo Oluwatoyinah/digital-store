@@ -4,6 +4,11 @@
 
 .products .box img {
     width: 80%;
+    transition: 0.3s all ease-in-out;
+}
+
+.products .box:hover img {
+    transform: scale(1.1);
 }
 
 .products h2 {
