@@ -73,3 +73,7 @@ ul li {
   text-decoration: none;
   border: 1px solid red;
 }
+
+.tx-red {
+  color: red;
+}

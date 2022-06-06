@@ -20,7 +20,8 @@ const ShopProduct = (props) => {
                     return <Product 
                     key={i}
                     imgurl={product.imgurl}
-                    name={product.name} />
+                    name={product.name}
+                    price={product.price} />
                 })}
             </div>
         </div>

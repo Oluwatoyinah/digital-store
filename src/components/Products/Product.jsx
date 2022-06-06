@@ -4,7 +4,7 @@ import {useState } from 'react';
 import React from 'react';
 import Modal from "../Modal/Modal";
 
-const Product = ({imgurl, name}) => {
+const Product = ({imgurl, name, price}) => {
 
     const [openModal, setOpenModal] = useState(false);
 
@@ -21,7 +21,7 @@ const Product = ({imgurl, name}) => {
                         </div>
                     </div>
               </div>
-              {openModal && <Modal imgurl={imgurl} openModal={setOpenModal} productName={name} />}
+              {openModal && <Modal imgurl={imgurl} openModal={setOpenModal} productName={name} productPrice={price} />}
             </>
   )
 }

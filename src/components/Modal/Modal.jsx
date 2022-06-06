@@ -4,7 +4,7 @@ import { FaShoppingCart, FaHeart } from 'react-icons/fa'
 import { Link } from "react-router-dom";
 import Counter from "../Counter/Counter";
 
-const Modal = ({imgurl, openModal, productName}) => {
+const Modal = ({imgurl, openModal, productName, productPrice}) => {
   return (
             <div className="modal active">   
                 <div className="popup active center" style={{position: "relative"}}>
@@ -20,6 +20,8 @@ const Modal = ({imgurl, openModal, productName}) => {
                         </div>
                         <div className="col-md-6 py-auto">
                             <h2>{productName}</h2>
+                            <p className='mb-0'><span>By </span> <span className='tx-red'>Apple</span></p>
+                            <h5><span className='tx-red'>{productPrice}</span></h5>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat suscipit sit rem deleniti incidunt blanditiis reprehenderit. ue. A, est! Omnis, soluta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, delectus!</p>
 
                             <div className="">
@@ -34,7 +36,7 @@ const Modal = ({imgurl, openModal, productName}) => {
 
                                 <Link className="btn-white" to={{ pathname: "/shopdetails"}}>
                                     <FaHeart size={18} className="mb-1 mr-2" />
-                                    Add to WishList
+                                    WishList
                                 </Link> 
                             </div>
 

@@ -21,7 +21,8 @@ const Products = (props) => {
                     return <Product 
                     key={i}
                     imgurl={product.imgurl}
-                    name={product.name} />
+                    name={product.name}
+                    price={product.price} />
                 }).filter((product, i) => i <= 3)}
             </div>
 
