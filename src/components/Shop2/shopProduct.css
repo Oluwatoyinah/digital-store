@@ -1,0 +1,25 @@
+.shop-products {
+    width: 100%;
+}
+
+.shop-products .box img {
+    width: 80%;
+    transition: 0.3s all ease-in-out;
+}
+
+.shop-products .box:hover img {
+    transform: scale(1.1);
+}
+
+.shop-products h2 {
+    font-size: 3.5rem;
+    font-weight: bolder;
+    /* text-align: center; */
+    font-family: 'Harabara', sans-serif;
+}
+
+
+.box {
+    padding: 2rem 1rem;
+    background-color: #eeeded;
+}

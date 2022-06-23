@@ -11,7 +11,7 @@ const Products = (props) => {
         <div className="container">
             <div className="row">
                 <div className="col-md-8 mx-auto text-center">
-                    <h2>Latest Products</h2>
+                    <h2>Popular Products</h2>
                     <p>Lorem ipsum dolor sit amet consectetur.</p>
                 </div>
             </div>

@@ -8,8 +8,7 @@ const Modal = ({imgurl, openModal, productName, productPrice}) => {
   return (
             <div className="modal active">   
                 <div className="popup active center" style={{position: "relative"}}>
-                    {/* <div className="close" id="dismiss-popup-btn" style={{textAlign: "right"}}>
-                    </div> */}
+                    
                         <button className='btn btn-danger' style={{position: "absolute", top:10, right: 10}} onClick={() => {openModal(false)}}>&times;</button>
 
                     <div className="row g-3 py-3">
@@ -19,7 +18,7 @@ const Modal = ({imgurl, openModal, productName, productPrice}) => {
                             </div>
                         </div>
                         <div className="col-md-6 py-auto">
-                            <h2>{productName}</h2>
+                            <h3>{productName}</h3>
                             <p className='mb-0'><span>By </span> <span className='tx-red'>Apple</span></p>
                             <h5><span className='tx-red'>{productPrice}</span></h5>
                             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat suscipit sit rem deleniti incidunt blanditiis reprehenderit. ue. A, est! Omnis, soluta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, delectus!</p>
@@ -29,12 +28,12 @@ const Modal = ({imgurl, openModal, productName, productPrice}) => {
                             </div>
 
                             <div className="description tx-blue mt-3">
-                                <Link className="btn-red mr-2" to={{ pathname: "/shopdetails"}}>
+                                <Link className="btn-red mr-2" to={{ pathname: "/cart"}}>
                                     <FaShoppingCart size={18} className="mb-1 mr-2 " />
                                     Add to Cart 
                                 </Link>
 
-                                <Link className="btn-white" to={{ pathname: "/shopdetails"}}>
+                                <Link className="btn-white" to={{ pathname: "/wishlist"}}>
                                     <FaHeart size={18} className="mb-1 mr-2" />
                                     WishList
                                 </Link> 

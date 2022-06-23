@@ -18,6 +18,13 @@
     font-family: 'Harabara', sans-serif;
 }
 
+.products h3 {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    /* text-align: center; */
+    font-family: 'Harabara', sans-serif;
+}
+
 .products h5 {
     font-size: 1.2rem;
     font-weight: bolder;

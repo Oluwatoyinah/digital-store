@@ -17,11 +17,17 @@ const Product = ({imgurl, name, price}) => {
                         
                         <div className="text-center mt-4">
                          
-                          <button className="btn-red" onClick={() => {setOpenModal(true)}} closeModal={setOpenModal}>View More</button>
+                          <button className="btn-red" onClick={() => {
+                              setOpenModal(true)}} 
+                              >View More</button>
                         </div>
                     </div>
               </div>
-              {openModal && <Modal imgurl={imgurl} openModal={setOpenModal} productName={name} productPrice={price} />}
+              {openModal && <Modal 
+                              imgurl={imgurl} 
+                              openModal={setOpenModal} 
+                              productName={name} 
+                              productPrice={price} />}
             </>
   )
 }
