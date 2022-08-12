@@ -18,12 +18,14 @@ const Products = (props) => {
 
             <div className="row g-3">
                 {ProductData.map((product, i) => {
-                    return <Product 
-                    key={i}
-                    imgurl={product.imgurl}
-                    name={product.name}
-                    price={product.price} />
-                }).filter((product, i) => i <= 3)}
+                    return  <div className="col-lg-3 col-sm-6 text-center p-3">
+                        <Product 
+                            key={i}
+                            imgurl={product.imgurl}
+                            name={product.name}
+                            price={product.price} />
+                            </div>
+                        }).filter((product, i) => i <= 3)}
             </div>
 
             <div className="text-center mt-5">

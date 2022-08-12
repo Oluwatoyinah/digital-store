@@ -10,7 +10,6 @@ const Product = ({imgurl, name, price}) => {
 
   return (
             <>
-              <div className="col-lg-3 col-sm-6 text-center p-3">
                     <div className="box">
                         <img src={imgurl}  alt="img" />
                         <p className="fw-bold">{name}</p>
@@ -22,7 +21,6 @@ const Product = ({imgurl, name, price}) => {
                               >View More</button>
                         </div>
                     </div>
-              </div>
               {openModal && <Modal 
                               imgurl={imgurl} 
                               openModal={setOpenModal} 

@@ -1,56 +1,56 @@
 import "./shop.css";
-import React, { useState, useEffect } from 'react';
 import ProductData from "../Products/ProductData";
+import Product from "../Products/Product";
+import { useState } from "react";
 
 const ShopProduct = (props) => {
-    const [data, setData] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
-    const [currentPage, setCurrentPage] = useState(1);
-    const [itemsPerPage, setItemsPerPage] = useState(5);
+    const [products, setProducts] = useState(ProductData)
 
-    const handleClick = (e) => {
-        setCurrentPage(e.target.id)
-        
+    const productFilter = (e) => {
+        let data = ProductData.filter(prod => prod.category === `${e.target.value}`)
+        setProducts(data)
+        console.log(e.target.value)
     }
-    const pages = [];
-
-    for(let i = 1; i <= Math.ceil(data.length / itemsPerPage); i++) {
-        pages.push(i)
-    } 
-
-    const indexOfLastItem = currentPage * itemsPerPage;
-    const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-    const currentItems = data.splice(indexOfFirstItem,indexOfLastItem)
-
-    const renderPageNumbers = pages.map((number) => {
-        return (
-            <li key={number} id={number} onClick={handleClick}>{number}</li>
-        )
-    })
-    console.log(currentPage)
-    console.log(currentItems)
-
-    useEffect(() => {
-        setIsLoading(true) 
-        setData(ProductData)
-        console.log(data)
-        setIsLoading(false) 
-    }, [ isLoading]);
-    
 
   return (
     <section className="container-fluid py-5 mb-5 shop-products">
         <div className="container">
             <div className="row">
                 <div className="">
-                    <h2>Our Products</h2>
+                    <h2>Store</h2>
                 </div>
             </div>
 
             <div className="row g-3">
-                {isLoading ? <h2>Loading....</h2> : currentItems.map((item, i) => <h4 key={i}>{item.name}</h4>)}
+                <div className=" col-lg-3 col-md-4">
+                    <div>
+                        <h3>    
 
-                <ul className="pageNumbers">{renderPageNumbers}</ul>
+
+                              
+                        </h3>
+                    </div>
+                    <div>
+                        <button className="btn btn-dark" style={{margin: "0 3px 3px 0 "}} value="phone" onClick={productFilter}>Phones</button>
+                        <button className="btn btn-dark" style={{margin: "0 3px 3px 0 "}} value="laptop" onClick={productFilter}>Laptops</button>
+                        <button className="btn btn-dark" style={{margin: "0 3px 3px 0 "}} value="speaker" onClick={productFilter}>Speakers</button>
+                        <button className="btn btn-dark" style={{margin: "0 3px 3px 0 "}} value="headphone" onClick={productFilter}>Headphones</button>
+                        <button className="btn btn-dark" style={{margin: "0 3px 3px 0 "}} value="monitor" onClick={productFilter}>Monitors</button>
+                    </div>
+                </div>
+                <div className="col-lg-9 col-md-8">
+                    <div className="row">
+                    {products.map((product, i) => {
+                    return  <div className="col-lg-4 col-sm-6 text-center p-3">
+                                <Product 
+                                key={i}
+                                imgurl={product.imgurl}
+                                name={product.name}
+                                price={product.price} />
+                            </div>
+                     }) }
+                    </div>
+                </div>
             </div>
 
         </div>
